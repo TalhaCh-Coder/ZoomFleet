@@ -1,0 +1,29 @@
+/* ======== */
+/*  HEADER  */
+/* ======== */
+.header-modifyer {
+   background: #000;
+   color: white;
+   padding: 8px 0;
+   position: fixed;
+   top: 0;
+   z-index: 10;
+   border-bottom: 2px solid white;
+}
+.header-modifyer div {
+   justify-content: space-between;
+}
+.header-modifyer h2 {
+   letter-spacing: 2px;
+}
+
+/* =============== */
+/*  MEDIA SECTION  */
+/* =============== */
+/* MOBILE */
+
+@media screen and (max-width: 425px) {
+   .header-modifyer {
+      padding: 5px 0;
+   }
+}

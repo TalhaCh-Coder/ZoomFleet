@@ -1,0 +1,22 @@
+/* ================== */
+/*  ABOUT US SECTION  */
+/* ================== */
+.about-wrapper {
+   text-align: center;
+   padding: 70px 0 60px 0;
+}
+.about-wrapper h1 {
+   margin-bottom: 25px;
+}
+.about-wrapper p {
+   font-size: 1.3rem;
+   font-weight: 500;
+}
+
+/* MEDIA SECTION */
+
+@media screen and (max-width: 425px) {
+}
+
+@media screen and (max-width: 768px) {
+}

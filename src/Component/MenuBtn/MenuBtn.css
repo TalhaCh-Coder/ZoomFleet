@@ -1,0 +1,29 @@
+.menu-bar-modifier {
+   position: fixed;
+   top: 52px;
+   padding: 8px 0;
+   background: #000;
+   display: none;
+}
+
+@media screen and (max-width: 425px) {
+   .menu-bar-modifier {
+      top: 67px;
+      padding: 5px 0;
+      border-bottom: 2px solid white;
+      z-index: 10;
+   }
+   .menu-bar-display {
+      display: block;
+   }
+}
+
+/* MEDIA SECTION */
+
+@media screen and (max-width: 425px) {
+   .menu-open {
+      display: flex;
+   }
+}
+@media screen and (max-width: 768px) {
+}

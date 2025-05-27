@@ -1,0 +1,22 @@
+{
+  "bookings": [
+    {
+      "id": "266e",
+      "fullName": "Talha Ahmed",
+      "contact": "+923229549450",
+      "pickupAddress": "Basti Sahwali,P/O Sadiq Nager, Khaim Garh, Tehsil & District Bahawalnager",
+      "dropoffAddress": "Basti Araiyan,p/o dunga bunga",
+      "pickupDate": "2025-05-23T09:52",
+      "returnDate": "2025-05-25T09:52",
+      "carName": "Honda Civic"
+    }
+  ],
+  "users": [
+    {
+      "id": "a6fa",
+      "name": "Yonus",
+      "email": "gdfdfgfgf@gamil.com",
+      "password": "sdfsdfdsf"
+    }
+  ]
+}

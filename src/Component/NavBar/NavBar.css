@@ -1,0 +1,46 @@
+/* NAVBAR SECTION */
+.navbar-modifier {
+   padding: 5px;
+   gap: 5px;
+   position: fixed;
+   top: 52px;
+   height: 60px;
+   background-color: #000;
+   border-bottom: 2px solid white;
+}
+.navbar-modifier a {
+   width: 25%;
+   height: 100%;
+   font-size: 1.5rem;
+   transition: all 0.4s;
+   color: white;
+}
+.navbar-modifier a:hover {
+   background: tomato;
+   color: white !important;
+}
+
+/* MEDIA SECTION */
+
+@media screen and (max-width: 425px) {
+   .navbar-modifier {
+      flex-direction: column;
+      top: 162px;
+      padding: 0;
+      gap: 0;
+      border-bottom: none;
+      background: #000;
+      display: none;
+   }
+   .navbar-modifier a {
+      background: #000;
+      width: 100vw;
+      padding: 3px 0;
+      border-bottom: 1px solid white;
+   }
+}
+@media screen and (max-width: 768px) {
+   .navbar-modifier {
+      display: flex;
+   }
+}

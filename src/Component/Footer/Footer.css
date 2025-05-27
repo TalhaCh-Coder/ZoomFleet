@@ -1,0 +1,12 @@
+/* ================ */
+/*  FOOTER SECTION  */
+/* ================ */
+.footer-modifier {
+   padding: 20px 5px;
+   background: rgb(80, 79, 79);
+   /* margin-top: 20px; */
+   box-sizing: border-box;
+   color: white;
+   text-align: center;
+   font-size: 1.2rem;
+}

@@ -1,0 +1,60 @@
+/* =============== */
+/*  RIDES SECTION  */
+/* =============== */
+.rides-cont-wrapper {
+   text-align: center;
+   padding: 100px 0;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   background: rgb(236, 233, 233);
+}
+/* .rides-cont-wrapper h1 {
+} */
+.rides-cont-modifier {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   padding: 0;
+   column-gap: 20px;
+}
+.card {
+   width: 100%;
+   display: flex;
+   height: auto;
+   flex-direction: column;
+   gap: 10px;
+   border-radius: 6px !important;
+}
+.card-img {
+   width: 100%;
+   height: auto;
+   opacity: 2;
+}
+.card-img img {
+   height: 158px;
+   object-fit: cover;
+   object-position: center;
+}
+.card-body {
+   width: 100%;
+   height: 60%;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   text-align: justify;
+}
+
+/* MEDIA SECTION */
+
+@media screen and (max-width: 425px) {
+   .rides-cont-modifier {
+      grid-template-columns: 1fr;
+      row-gap: 30px;
+   }
+}
+@media screen and (max-width: 768px) {
+   .rides-cont-modifier {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 30px;
+   }
+}

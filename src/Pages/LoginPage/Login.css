@@ -1,0 +1,73 @@
+.wrapper-div {
+   width: 450px;
+   margin: 0 auto;
+   border-radius: 20px;
+   background: #1d1d1d;
+}
+
+.login-container {
+   max-width: 100%;
+   margin: 60px auto;
+   margin-bottom: 0;
+   padding: 30px 50px;
+   background-color: #353434;
+   border-radius: 20px;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.login-heading {
+   text-align: center;
+   color: white;
+   font-size: 3rem;
+   margin-bottom: 30px;
+}
+
+.login-form {
+   display: flex;
+   flex-direction: column;
+}
+
+.login-label {
+   margin-bottom: 6px;
+   font-weight: 600;
+   font-size: 16px;
+   color: #c7c6c6;
+}
+
+.login-input {
+   padding: 10px 12px;
+   margin-bottom: 30px;
+   border: none;
+   border-bottom: 1px solid tomato;
+   font-size: 16px;
+   transition: all 0.3s ease;
+}
+
+.login-input:focus {
+   border: none;
+   outline: 1px solid tomato;
+}
+.registry-link-container{
+   padding: 30px;
+
+}
+.link-to-register {
+   font-size: 1.5rem;
+   color: rgb(243, 148, 131); /* bright cyan */
+   display: block;
+   text-decoration: underline;
+   cursor: pointer;
+   transition: color 0.3s ease;
+   text-align: center;
+}
+
+.link-to-register:hover {
+   color: #4dd0e1; /* lighter shade on hover */
+}
+.login-btn-modifier{
+   margin-top: 20px;
+}
+.error-message{
+   color: red;
+   font-size: 1.32rem;
+   text-align: center;
+}
