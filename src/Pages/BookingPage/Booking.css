@@ -2,27 +2,29 @@
 /* BOOKING SECTION */
 /* =============== */
 .parent-for-bg-img {
-   background-image: url("/imgs/cars.jpg");
+   background-image: url("./cars.jpg");
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
    padding-top: 40px !important;
+   padding-bottom: 30px;
+   height: 100vh;
 }
-.booking-section-heading{
+.booking-section-heading {
    color: white;
    margin-bottom: 30px;
 }
 .booking-form-modifier {
-   background:rgba(225, 225, 225, 0.1);
+   background: rgba(225, 225, 225, 0.1);
    box-shadow: 0 0 15px 1px white;
    padding: 30px 0;
    text-align: center;
-   width: 60%;
+   width: 50%;
    margin: 0 auto;
    border-radius: 30px;
 }
 .booking-form-modifier div {
-   width: 70%;
+   width: 85%;
    padding: 0 auto;
    margin: 0 auto;
    display: flex;
@@ -30,14 +32,20 @@
    margin-top: 10px;
 }
 .booking-form-modifier div input {
-   width: 50%;
+   width: 60%;
    background: transparent;
    box-sizing: border-box;
+   padding: 8px;
    color: white;
-   /* border: 1px solid#313030; */
+   border: none;
+   outline: none;
    border-bottom: 1px solid tomato;
 }
-.booking-form-modifier div input::placeholder{
+.booking-form-modifier div input:focus {
+   border-bottom: none;
+   outline: 1px solid tomato;
+}
+.booking-form-modifier div input::placeholder {
    color: rgb(185, 182, 182);
 }
 .label-cont {
@@ -46,7 +54,7 @@
 .booking-form-modifier label {
    color: white;
    font-size: 1.5rem;
-   width: 50%;
+   width: 40%;
    display: flex;
    justify-content: flex-start;
 }
@@ -54,22 +62,38 @@
 .booking-form-modifier button {
    margin-top: 20px;
 }
-.booking-btn-wrapper{
+.booking-btn-wrapper {
    justify-content: space-between;
 }
 /* MEDIA SECTION */
 
 @media screen and (max-width: 425px) {
    /* Booking Section */
+   .parent-for-bg-img {
+      height: auto;
+   }
    .booking-form-modifier {
-      width: 90%;
+      width: 90% !important;
    }
    .booking-form-modifier div {
       width: 80%;
       flex-direction: column;
    }
-   .booking-form-modifier div input {
+   .booking-form-modifier label {
       width: 100%;
+   }
+   .booking-form-modifier div input {
+      border: none;
+      border-bottom: 1px solid tomato;
+      width: 100%;
+      padding: 10px;
+   }
+   .booking-form-modifier div input:focus {
+      border: none;
+      outline: 1px solid tomato;
+   }
+   .booking-form-modifier button {
+      margin-top: 10px !important;
    }
 }
 @media screen and (max-width: 768px) {

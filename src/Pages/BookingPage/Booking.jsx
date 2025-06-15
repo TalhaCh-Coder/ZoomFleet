@@ -92,74 +92,62 @@ function Booking({ carName: propCarName }) {
             id="Booking-Form"
             className="booking-form-modifier"
          >
-            <div className="label-cont">
+            <div className="label-and-input-wrapper">
                <label htmlFor="fullName">Full Name</label>
-               <label htmlFor="contact">Contact</label>
-            </div>
-            <div>
                <input
                   type="text"
                   name="fullName"
-                  id="fullName"
-                  placeholder="Full Name"
+                  placeholder="Enter your full name"
                   value={formData.fullName}
                   onChange={handleChange}
-                  required
                />
+            </div>
+            <div className="label-and-input-wrapper">
+               <label htmlFor="contact">Contact</label>
                <input
-                  type="tel"
+                  type="text"
                   name="contact"
-                  id="contact"
-                  placeholder="Contact"
+                  placeholder="Enter your contact"
                   value={formData.contact}
                   onChange={handleChange}
-                  required
                />
             </div>
-            <div className="label-cont">
-               <label htmlFor="pickupAddress">Pickup Location</label>
-               <label htmlFor="dropoffAddress">Drop-off Location</label>
-            </div>
-            <div>
+            <div className="label-and-input-wrapper">
+               <label htmlFor="pickupAddress">Pickup Address</label>
                <input
                   type="text"
                   name="pickupAddress"
-                  id="pickupAddress"
-                  placeholder="Pickup Location"
+                  placeholder="Enter Pickup Address"
                   value={formData.pickupAddress}
                   onChange={handleChange}
-                  required
                />
+            </div>
+            <div className="label-and-input-wrapper">
+               <label htmlFor="dropoffAddress">Dropoff Address</label>
                <input
                   type="text"
                   name="dropoffAddress"
-                  id="dropoffAddress"
-                  placeholder="Drop-off Location"
+                  placeholder="Enter Dropoff Address"
                   value={formData.dropoffAddress}
                   onChange={handleChange}
-                  required
                />
             </div>
-            <div className="label-cont">
+            <div className="label-and-input-wrapper">
                <label htmlFor="pickupDate">Pickup Date</label>
-               <label htmlFor="returnDate">Return Date</label>
-            </div>
-            <div>
                <input
                   type="datetime-local"
                   name="pickupDate"
-                  id="pickupDate"
                   value={formData.pickupDate}
                   onChange={handleChange}
-                  required
                />
+            </div>
+            <div className="label-and-input-wrapper">
+               <label htmlFor="returnDate">Return Date</label>
                <input
                   type="datetime-local"
                   name="returnDate"
-                  id="returnDate"
                   value={formData.returnDate}
                   onChange={handleChange}
-                  required
                />
             </div>
             <div className="booking-btn-wrapper">
@@ -167,8 +155,8 @@ function Booking({ carName: propCarName }) {
                   CONFIRM
                </button>
                <button
-                  className="confirmBookingBtn"
                   type="button"
+                  className="confirmBookingBtn"
                   onClick={() => navigate("/home")}
                >
                   CANCEL
