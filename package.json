@@ -3,6 +3,7 @@
    "private": true,
    "version": "0.0.0",
    "type": "module",
+   "homepage": "https://talhach-coder.github.io/ZoomFleet",
    "scripts": {
       "dev": "vite",
       "build": "vite build",

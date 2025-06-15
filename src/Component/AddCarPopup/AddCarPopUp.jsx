@@ -23,7 +23,7 @@ function AddCarPopup({ onClose, onCarAdded }) {
    const handleSubmit = (e) => {
       e.preventDefault();
 
-      fetch("http://localhost:4000/cars", {
+      fetch("https://car-rental-backend-production-2b49.up.railway.app/cars", {
          method: "POST",
          headers: {
             "Content-Type": "application/json",

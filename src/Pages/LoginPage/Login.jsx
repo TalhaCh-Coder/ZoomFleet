@@ -13,7 +13,7 @@ function Login({ setLoggedInUser }) {
    const adminPassword = "admin123";
 
    useEffect(() => {
-      fetch("http://localhost:4000/users")
+      fetch("https://car-rental-backend-production-2b49.up.railway.app/users")
          .then((res) => res.json())
          .then((data) => setUsers(data))
          .catch((err) => console.log(err));

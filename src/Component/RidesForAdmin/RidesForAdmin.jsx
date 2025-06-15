@@ -7,7 +7,7 @@ function RidesForAdmin() {
    const [showPopup, setShowPopup] = useState(false);
 
    const fetchRides = () => {
-      fetch("http://localhost:4000/cars")
+      fetch("https://car-rental-backend-production-2b49.up.railway.app/cars")
          .then((res) => res.json())
          .then((data) => setRides(data))
          .catch((err) => console.log(err));
@@ -19,9 +19,12 @@ function RidesForAdmin() {
 
    function handleDelete(id) {
       if (window.confirm("Are you sure to remove this car?")) {
-         fetch(`http://localhost:4000/cars/${id}`, {
-            method: "DELETE",
-         })
+         fetch(
+            `https://car-rental-backend-production-2b49.up.railway.app/cars/${id}`,
+            {
+               method: "DELETE",
+            }
+         )
             .then((res) => {
                if (res.ok) {
                   fetchRides();

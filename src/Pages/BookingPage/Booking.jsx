@@ -52,13 +52,16 @@ function Booking({ carName: propCarName }) {
       };
 
       try {
-         const response = await fetch("http://localhost:4000/bookings", {
-            method: "POST",
-            headers: {
-               "Content-Type": "application/json",
-            },
-            body: JSON.stringify(bookingData),
-         });
+         const response = await fetch(
+            "https://car-rental-backend-production-2b49.up.railway.app/bookings",
+            {
+               method: "POST",
+               headers: {
+                  "Content-Type": "application/json",
+               },
+               body: JSON.stringify(bookingData),
+            }
+         );
 
          if (!response.ok) throw new Error("Failed to save booking.");
 

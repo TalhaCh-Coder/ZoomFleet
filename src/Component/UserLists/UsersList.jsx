@@ -7,7 +7,7 @@ function UsersList() {
    const [error, setError] = useState(null);
 
    const fetchUsers = () => {
-      fetch("http://localhost:4000/users")
+      fetch("https://car-rental-backend-production-2b49.up.railway.app/users")
          .then((res) => {
             if (!res.ok) throw new Error("Failed to fetch users");
             return res.json();
@@ -28,9 +28,12 @@ function UsersList() {
 
    const handleDelete = (id) => {
       if (window.confirm("Are you sure you want to remove this user?")) {
-         fetch(`http://localhost:4000/users/${id}`, {
-            method: "DELETE",
-         })
+         fetch(
+            `https://car-rental-backend-production-2b49.up.railway.app/users/${id}`,
+            {
+               method: "DELETE",
+            }
+         )
             .then((res) => {
                if (res.ok) {
                   fetchUsers(); // Refresh user list
@@ -47,7 +50,9 @@ function UsersList() {
 
    return (
       <div className="container-fluid users-container">
-         <h2 className="users-heading" id="Users">Registered Users</h2>
+         <h2 className="users-heading" id="Users">
+            Registered Users
+         </h2>
          <div className="table-wrapper">
             <table className="users-table">
                <thead>

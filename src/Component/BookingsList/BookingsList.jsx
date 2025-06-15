@@ -7,7 +7,9 @@ function BookingsList({ matchedUser }) {
    const [error, setError] = useState(null);
 
    const fetchBookings = () => {
-      fetch("http://localhost:4000/bookings")
+      fetch(
+         "https://car-rental-backend-production-2b49.up.railway.app/bookings"
+      )
          .then((res) => {
             if (!res.ok) throw new Error("Failed to fetch bookings");
             return res.json();
@@ -38,9 +40,12 @@ function BookingsList({ matchedUser }) {
 
    const handleDelete = (id) => {
       if (window.confirm("Are you sure you want to remove this booking?")) {
-         fetch(`http://localhost:4000/bookings/${id}`, {
-            method: "DELETE",
-         })
+         fetch(
+            `https://car-rental-backend-production-2b49.up.railway.app/bookings/${id}`,
+            {
+               method: "DELETE",
+            }
+         )
             .then((res) => {
                if (res.ok) {
                   fetchBookings(); // Refresh list

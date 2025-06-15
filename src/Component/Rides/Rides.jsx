@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Rides() {
    const [rides, setRides] = useState([]);
    useEffect(() => {
-      fetch("http://localhost:4000/cars")
+      fetch("https://car-rental-backend-production-2b49.up.railway.app/cars")
          .then((res) => {
             return res.json();
          })

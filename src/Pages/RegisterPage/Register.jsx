@@ -18,7 +18,7 @@ function Register() {
          return;
       }
 
-      fetch("http://localhost:4000/users", {
+      fetch("https://car-rental-backend-production-2b49.up.railway.app/users", {
          method: "POST",
          headers: {
             "Content-Type": "application/json",
