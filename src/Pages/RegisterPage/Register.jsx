@@ -17,9 +17,7 @@ function Register() {
          setError("Please fill all the input fields!");
          return;
       }
-      // else if (here we will apply a condition to check if user already exists or not) {
-      //    ...
-      // }
+
       fetch("http://localhost:4000/users", {
          method: "POST",
          headers: {
@@ -45,58 +43,61 @@ function Register() {
    };
 
    return (
-      <div className="register-container">
-         <h2 className="register-title">Register</h2>
-         <form className="register-form" onSubmit={handleSubmit}>
-            <label htmlFor="name" className="register-label">
-               Full Name
-            </label>
-            <input
-               type="text"
-               id="name"
-               name="name"
-               className="register-input"
-               value={name}
-               onChange={(e) => {
-                  setName(e.target.value);
-               }}
-               required
-            />
-
-            <label htmlFor="email" className="register-label">
-               Email
-            </label>
-            <input
-               type="email"
-               id="email"
-               name="email"
-               className="register-input"
-               value={email}
-               onChange={(e) => {
-                  setEmail(e.target.value);
-               }}
-               required
-            />
-
-            <label htmlFor="password" className="register-label">
-               Password
-            </label>
-            <input
-               type="password"
-               id="password"
-               name="password"
-               className="register-input"
-               value={password}
-               onChange={(e) => {
-                  setPassword(e.target.value);
-               }}
-               required
-            />
-            {error && <p className="error-message">{error}</p>}
-            <button type="submit" className="coloredButton">
-               Register
-            </button>
-         </form>
+      <div className="parent-for-bg-img">
+         <div className="register-container">
+            <h2 className="register-heading">Register</h2>
+            <form className="register-form" onSubmit={handleSubmit}>
+               <label htmlFor="name" className="register-label">
+                  Full Name
+               </label>
+               <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  className="register-input"
+                  value={name}
+                  onChange={(e) => {
+                     setName(e.target.value);
+                  }}
+                  required
+               />
+               <label htmlFor="email" className="register-label">
+                  Email
+               </label>
+               <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  className="register-input"
+                  value={email}
+                  onChange={(e) => {
+                     setEmail(e.target.value);
+                  }}
+                  required
+               />
+               <label htmlFor="password" className="register-label">
+                  Password
+               </label>
+               <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  className="register-input"
+                  value={password}
+                  onChange={(e) => {
+                     setPassword(e.target.value);
+                  }}
+                  required
+               />
+               {error && <p className="error-message">{error}</p>}
+               <button
+                  type="submit"
+                  className="coloredButton register-btn-modifier"
+               >
+                  Register
+               </button>
+            </form>
+         </div>
       </div>
    );
 }

@@ -1,4 +1,7 @@
 /* NAVBAR SECTION */
+* {
+   box-sizing: border-box;
+}
 .navbar-modifier {
    padding: 5px;
    gap: 5px;
@@ -7,6 +10,9 @@
    height: 60px;
    background-color: #000;
    border-bottom: 2px solid white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 .navbar-modifier a {
    width: 25%;
@@ -40,7 +46,11 @@
    }
 }
 @media screen and (max-width: 768px) {
+}
+@media screen and (min-width: 426px) {
    .navbar-modifier {
-      display: flex;
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
    }
 }

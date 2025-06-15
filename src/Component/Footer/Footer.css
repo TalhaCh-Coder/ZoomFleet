@@ -1,6 +1,9 @@
 /* ================ */
 /*  FOOTER SECTION  */
 /* ================ */
+* {
+   box-sizing: border-box;
+}
 .footer-modifier {
    padding: 20px 5px;
    background: rgb(80, 79, 79);

@@ -1,6 +1,9 @@
 /* ======== */
 /*  HEADER  */
 /* ======== */
+*{
+   box-sizing: border-box;
+}
 .header-modifyer {
    background: #000;
    color: white;

@@ -1,6 +1,6 @@
 import "./MenuBtn.css";
 
-function MenuBtn() {
+function MenuBtn({ navDisplay, setNavDisplay }) {
    return (
       <>
          <div className="container menu-bar-modifier menu-bar-display">
@@ -10,6 +10,11 @@ function MenuBtn() {
                   src="./imgs/menu-bar.png"
                   alt="Menu button"
                   width="30px"
+                  onClick={() => {
+                     console.log("Btn is clicked!");
+                     if (navDisplay === "none") setNavDisplay("flex");
+                     else setNavDisplay("none");
+                  }}
                />
             </div>
          </div>

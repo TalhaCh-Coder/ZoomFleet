@@ -19,7 +19,7 @@ html {
 .coloredButton {
    border: none;
    /* border-radius: 6px; */
-   background: tomato;
+   background: linear-gradient(rgb(236, 129, 110), rgb(185, 43, 18));
    color: white;
    transition: all 0.4s;
    font-size: 18px;

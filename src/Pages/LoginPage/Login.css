@@ -1,23 +1,33 @@
+.parent-for-bg-img {
+   background-image: url("/public/imgs/cars.jpg");
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   height: 100vh;
+   padding-top: 60px;
+}
+
 .wrapper-div {
-   width: 450px;
+   width: 30vw;
    margin: 0 auto;
    border-radius: 20px;
-   background: #1d1d1d;
+   background: rgba(225, 225, 225, 0.1);
+   box-shadow: 0 0 15px 1px white;
 }
 
 .login-container {
-   max-width: 100%;
-   margin: 60px auto;
+   /* max-width: 100%; */
    margin-bottom: 0;
    padding: 30px 50px;
-   background-color: #353434;
+   background: rgba(0, 0, 0, 0.5);
+
    border-radius: 20px;
    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 .login-heading {
    text-align: center;
    color: white;
-   font-size: 3rem;
+   font-size: 2.5rem;
    margin-bottom: 30px;
 }
 
@@ -30,12 +40,12 @@
    margin-bottom: 6px;
    font-weight: 600;
    font-size: 16px;
-   color: #c7c6c6;
+   color: white;
 }
 
 .login-input {
-   padding: 10px 12px;
-   margin-bottom: 30px;
+   padding: 15px 12px !important;
+   margin-bottom: 22px;
    border: none;
    border-bottom: 1px solid tomato;
    font-size: 16px;
@@ -46,9 +56,8 @@
    border: none;
    outline: 1px solid tomato;
 }
-.registry-link-container{
+.registry-link-container {
    padding: 30px;
-
 }
 .link-to-register {
    font-size: 1.5rem;
@@ -63,11 +72,51 @@
 .link-to-register:hover {
    color: #4dd0e1; /* lighter shade on hover */
 }
-.login-btn-modifier{
+.login-btn-modifier {
    margin-top: 20px;
 }
-.error-message{
-   color: red;
+.error-message {
+   color: rgb(250, 67, 67) !important;
    font-size: 1.32rem;
    text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+   .wrapper-div {
+      width: 60vw;
+   }
+}
+@media screen and (max-width: 768px) {
+   .wrapper-div {
+      width: 60vw;
+   }
+}
+@media screen and (max-width: 568px) {
+   .wrapper-div {
+      width: 80vw;
+   }
+}
+
+@media screen and (max-width: 425px) {
+   .wrapper-div {
+      width: 98vw;
+   }
+   .login-container {
+      padding: 20px 30px;
+      margin-top: 30px;
+   }
+   .login-heading {
+      margin-bottom: 25px;
+   }
+   .login-input {
+      margin-bottom: 18px;
+   }
+   .login-btn-modifier {
+      width: 50%;
+      align-self: flex-end;
+      padding: 10px !important;
+   }
+   .link-to-register {
+      font-size: 1.35rem;
+   }
 }

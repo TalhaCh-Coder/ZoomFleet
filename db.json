@@ -1,22 +1,61 @@
 {
+  "cars": [
+    {
+      "id": "abb4",
+      "carName": "Kia Pacento",
+      "carDiscription": "Luxary and comfortable car",
+      "pricePerHour": "500",
+      "imageURL": "",
+      "brand": "Kia ",
+      "model": "Pacento",
+      "availability": true
+    },
+    {
+      "id": "2676",
+      "carName": "Suzuki Mehran",
+      "carDiscription": "A comfortable car",
+      "pricePerHour": "500",
+      "imageURL": "",
+      "brand": "Suzuki",
+      "model": "Mehran",
+      "availability": true
+    },
+    {
+      "id": "d33d",
+      "carName": "Toyota Crolla",
+      "carDiscription": "A luxary car",
+      "pricePerHour": "600",
+      "imageURL": "",
+      "brand": "Toyota",
+      "model": "Crolla",
+      "availability": true
+    }
+  ],
   "bookings": [
     {
-      "id": "266e",
-      "fullName": "Talha Ahmed",
+      "id": "b63d",
+      "fullName": "Talha Ahmad",
       "contact": "+923229549450",
       "pickupAddress": "Basti Sahwali,P/O Sadiq Nager, Khaim Garh, Tehsil & District Bahawalnager",
-      "dropoffAddress": "Basti Araiyan,p/o dunga bunga",
-      "pickupDate": "2025-05-23T09:52",
-      "returnDate": "2025-05-25T09:52",
-      "carName": "Honda Civic"
+      "dropoffAddress": "Lahore",
+      "pickupDate": "2025-06-16T09:45",
+      "returnDate": "2025-06-18T09:45",
+      "userEmail": "talhaahmeduni022@gmail.com",
+      "carName": "Kia Pacento"
     }
   ],
   "users": [
     {
-      "id": "a6fa",
-      "name": "Yonus",
-      "email": "gdfdfgfgf@gamil.com",
-      "password": "sdfsdfdsf"
+      "id": "d45e",
+      "name": "Talha Ahmad",
+      "email": "talhaahmeduni022@gmail.com",
+      "password": "Pk1947@#$"
+    },
+    {
+      "id": "5e6d",
+      "name": "Umair",
+      "email": "umair3262@gmail.com",
+      "password": "eagle123"
     }
   ]
 }

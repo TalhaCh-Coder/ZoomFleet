@@ -1,30 +1,27 @@
-import "../../common.css";
+import React, { useState } from "react";
 import Header from "../../Component/Header/Header";
 import MenuBtn from "../../Component/MenuBtn/MenuBtn";
 import NavBar from "../../Component/NavBar/NavBar";
 import Hero from "../../Component/Hero/Hero";
-import About from "../../Component/About/About";
-import Rides from "../../Component/Rides/Rides";
-import Contact from "../../Component/Contact/Contact";
 import Footer from "../../Component/Footer/Footer";
-import { useState } from "react";
+import RidesForAdmin from "../../Component/RidesForAdmin/RidesForAdmin";
+import UsersList from "../../Component/UserLists/UsersList";
 import BookingsList from "../../Component/BookingsList/BookingsList";
 
-function Home({ matchedUser, setLoggedInUser }) {
+function HomeForAdmin({ setLoggedInUser }) {
    const [navDisplay, setNavDisplay] = useState("none");
    return (
       <>
          <Header />
          <MenuBtn navDisplay={navDisplay} setNavDisplay={setNavDisplay} />
-         <NavBar userType="passenger" navDisplay={navDisplay} />
+         <NavBar userType="admin" navDisplay={navDisplay} />
          <Hero setLoggedInUser={setLoggedInUser} />
-         <About />
-         <Rides />
-         <BookingsList matchedUser={matchedUser} />
-         <Contact />
+         <RidesForAdmin />
+         <UsersList />
+         <BookingsList />
          <Footer />
       </>
    );
 }
 
-export default Home;
+export default HomeForAdmin;

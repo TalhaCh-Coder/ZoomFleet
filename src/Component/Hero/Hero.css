@@ -1,11 +1,14 @@
 /* ============== */
 /*  HERO SECTION  */
 /* ============== */
+* {
+   box-sizing: border-box;
+}
 .hero-modifier {
    margin-top: 112px;
    flex-direction: column;
    gap: 20px;
-   background: url("./imgs/cars.jpg");
+   background: url("/imgs/cars.jpg");
    height: 500px;
    background-position: center;
    background-size: cover;
@@ -23,10 +26,27 @@
    width: 50%;
    text-align: center;
 }
-.hero-modifier button {
-   padding: 0 !important;
+/* Hero.css */
+h1 {
+   animation: fadeIn 1s ease-in-out;
+   transition: all 0.3s ease-in-out;
 }
 
+@keyframes fadeIn {
+   from {
+      opacity: 0;
+      transform: scale(0.8) translate(-30px, 20px) rotate(10deg); /* from bottom-left */
+   }
+   to {
+      opacity: 1;
+      transform: scale(1) translate(0, 0) rotate(0deg); /* to center */
+   }
+}
+
+.logout-btn-modifier {
+   padding:15px  30px !important;
+   margin-top: 20px;
+}
 /* MEDIA SECTION */
 
 @media screen and (max-width: 425px) {

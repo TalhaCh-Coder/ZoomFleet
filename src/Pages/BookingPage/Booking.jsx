@@ -1,8 +1,9 @@
 import "./Booking.css";
-import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function Booking({ carName: propCarName }) {
+   const navigate = useNavigate();
    const location = useLocation();
    const queryParams = new URLSearchParams(location.search);
    const carName = propCarName || queryParams.get("car") || "Unknown Car";
@@ -15,6 +16,23 @@ function Booking({ carName: propCarName }) {
       pickupDate: "",
       returnDate: "",
    });
+
+   const [userEmail, setUserEmail] = useState("");
+
+   useEffect(() => {
+      const storedUser = localStorage.getItem("loggedInUser");
+      if (storedUser) {
+         const parsedUser = JSON.parse(storedUser);
+         setUserEmail(parsedUser.email || "");
+         setFormData((prev) => ({
+            ...prev,
+            fullName: parsedUser.name || "",
+         }));
+      } else {
+         alert("Please login before booking.");
+         navigate("/login");
+      }
+   }, [navigate]);
 
    const handleChange = (e) => {
       const { name, value } = e.target;
@@ -29,6 +47,7 @@ function Booking({ carName: propCarName }) {
 
       const bookingData = {
          ...formData,
+         userEmail,
          carName,
       };
 
@@ -41,14 +60,10 @@ function Booking({ carName: propCarName }) {
             body: JSON.stringify(bookingData),
          });
 
-         if (!response.ok) {
-            throw new Error("Failed to save booking.");
-         }
+         if (!response.ok) throw new Error("Failed to save booking.");
 
-         const data = await response.json();
-         alert(
-            `Booking saved successfully with booking id ${data.id}. Remember your booking id if you have to cancel your booking in future!`
-         );
+         await response.json();
+         navigate("/home");
 
          setFormData({
             fullName: "",
@@ -65,7 +80,7 @@ function Booking({ carName: propCarName }) {
    };
 
    return (
-      <>
+      <div className="parent-for-bg-img">
          <h1 className="sub-section-heading booking-section-heading">
             Book {carName} Now
          </h1>
@@ -84,7 +99,6 @@ function Booking({ carName: propCarName }) {
                   name="fullName"
                   id="fullName"
                   placeholder="Full Name"
-                  autoComplete="name"
                   value={formData.fullName}
                   onChange={handleChange}
                   required
@@ -94,13 +108,11 @@ function Booking({ carName: propCarName }) {
                   name="contact"
                   id="contact"
                   placeholder="Contact"
-                  autoComplete="tel"
                   value={formData.contact}
                   onChange={handleChange}
                   required
                />
             </div>
-
             <div className="label-cont">
                <label htmlFor="pickupAddress">Pickup Location</label>
                <label htmlFor="dropoffAddress">Drop-off Location</label>
@@ -111,7 +123,6 @@ function Booking({ carName: propCarName }) {
                   name="pickupAddress"
                   id="pickupAddress"
                   placeholder="Pickup Location"
-                  autoComplete="street-address"
                   value={formData.pickupAddress}
                   onChange={handleChange}
                   required
@@ -121,13 +132,11 @@ function Booking({ carName: propCarName }) {
                   name="dropoffAddress"
                   id="dropoffAddress"
                   placeholder="Drop-off Location"
-                  autoComplete="street-address"
                   value={formData.dropoffAddress}
                   onChange={handleChange}
                   required
                />
             </div>
-
             <div className="label-cont">
                <label htmlFor="pickupDate">Pickup Date</label>
                <label htmlFor="returnDate">Return Date</label>
@@ -150,12 +159,20 @@ function Booking({ carName: propCarName }) {
                   required
                />
             </div>
-
-            <button type="submit" className="confirmBookingBtn">
-               CONFIRM BOOKING
-            </button>
+            <div className="booking-btn-wrapper">
+               <button type="submit" className="confirmBookingBtn">
+                  CONFIRM
+               </button>
+               <button
+                  className="confirmBookingBtn"
+                  type="button"
+                  onClick={() => navigate("/home")}
+               >
+                  CANCEL
+               </button>
+            </div>
          </form>
-      </>
+      </div>
    );
 }
 
