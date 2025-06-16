@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./BookingsList.css";
 
-function BookingsList({ matchedUser }) {
+function BookingsList({ matchedUser, canDelete = false }) {
    const [bookings, setBookings] = useState([]);
    const [loading, setLoading] = useState(true);
    const [error, setError] = useState(null);
@@ -75,7 +75,7 @@ function BookingsList({ matchedUser }) {
                      <th>Pick Up Date</th>
                      <th>Return Date</th>
                      <th>PickUp - DropOff</th>
-                     {!matchedUser && <th>Action</th>}
+                     {canDelete && <th>Action</th>}
                   </tr>
                </thead>
                <tbody>
@@ -96,7 +96,7 @@ function BookingsList({ matchedUser }) {
                                  booking.dropoffAddress || "N/A"
                               }`}
                            </td>
-                           {!matchedUser && (
+                           {canDelete && (
                               <td>
                                  <button
                                     className="remove-booking-btn"

@@ -10,7 +10,7 @@ function Login({ setLoggedInUser }) {
    const [error, setError] = useState("");
    const navigate = useNavigate();
    const adminEmail = "admin@zoomfleet.com";
-   const adminPassword = "admin123";
+   const adminPassword = "Admin1234";
 
    useEffect(() => {
       fetch("https://car-rental-backend-production-2b49.up.railway.app/users")

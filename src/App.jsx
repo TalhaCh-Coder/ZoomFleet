@@ -28,7 +28,7 @@ function App() {
    }, []);
 
    return (
-      <Router>
+      <Router basename="/ZoomFleet">
          <Routes>
             {/* Root Route - decides where to go after login */}
             <Route

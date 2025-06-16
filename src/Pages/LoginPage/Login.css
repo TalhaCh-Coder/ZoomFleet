@@ -3,7 +3,7 @@
    background-position: center;
    background-size: cover;
    background-repeat: no-repeat;
-   height: 100vh;
+   min-height: 100vh !important;
    padding-top: 60px;
 }
 
@@ -98,8 +98,11 @@
 }
 
 @media screen and (max-width: 425px) {
+   .parent-for-bg-img {
+      min-height: 100vh !important;
+   }
    .wrapper-div {
-      width: 98vw;
+      width: 90vw;
    }
    .login-container {
       padding: 20px 30px;

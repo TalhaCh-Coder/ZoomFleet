@@ -18,7 +18,7 @@ function HomeForAdmin({ setLoggedInUser }) {
          <Hero setLoggedInUser={setLoggedInUser} />
          <RidesForAdmin />
          <UsersList />
-         <BookingsList />
+         <BookingsList canDelete={true} />
          <Footer />
       </>
    );

@@ -20,7 +20,7 @@ function Home({ matchedUser, setLoggedInUser }) {
          <Hero setLoggedInUser={setLoggedInUser} />
          <About />
          <Rides />
-         <BookingsList matchedUser={matchedUser} />
+         <BookingsList matchedUser={matchedUser} canDelete={true} />
          <Contact />
          <Footer />
       </>
