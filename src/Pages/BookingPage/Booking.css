@@ -8,7 +8,8 @@
    background-size: cover;
    padding-top: 40px !important;
    padding-bottom: 30px;
-   min-height: 100% !important;
+   height: auto !important;
+   min-height: 100vh !important;
 }
 .booking-section-heading {
    color: white;
@@ -70,9 +71,6 @@
 
 @media screen and (max-width: 425px) {
    /* Booking Section */
-   .parent-for-bg-img {
-      height: auto;
-   }
    .booking-form-modifier {
       width: 90% !important;
    }
